@@ -22,7 +22,10 @@
   "scripts": {
     "test": "node_modules/mocha/bin/_mocha test/*.js -t 30000 --reporter spec",
     "compile": "babel src --out-dir lib",
-    "prepublish": "npm run compile && npm test"
+    "prepublish": "npm run compile && npm test",
+    "patch-release": "npm version patch && npm publish && git push --follow-tags",
+    "minor-release": "npm version minor && npm publish && git push --follow-tags",
+    "major-release": "npm version major && npm publish && git push --follow-tags"
   },
   "bin": {
     "npm-workspace": "bin/npm-workspace"
