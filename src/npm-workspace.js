@@ -274,13 +274,13 @@ self.npm = (argsIn, cwd) => {
   const options = {
     cwd: cwd.replace(/\\/g, '/')
   };
-  options.out = through2((chunk, enc, cb) => {
+  options.out = through2(function cb(chunk, enc, cb) {
     if (program.verbose) {
       this.push(chunk);
       process.stdout.write(chunk, enc, cb);
     }
   });
-  options.err = through2((chunk, enc, cb) => {
+  options.err = through2(function cb(chunk, enc, cb) {
     if (program.verbose) {
       this.push(chunk);
       process.stdout.write(chunk, enc, cb);
