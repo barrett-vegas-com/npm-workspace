@@ -61,10 +61,10 @@ function checkRecursiveInstall(wanted) {
 }
 
 describe('npm-workspace install', function() {
+  this.timeout(30000);
   beforeEach(function(done) {
     //clean and create new sandbox
-    rimraf.sync(SANDBOX_DIR);
-    ncp(FIXTURES_DIR, SANDBOX_DIR, done);
+    rimraf(SANDBOX_DIR, {}, () => ncp(FIXTURES_DIR, SANDBOX_DIR, done));
   });
   
   it('should install and link a module (programmatically)', function(done) {
@@ -160,10 +160,11 @@ describe('npm-workspace install', function() {
 
 
 describe('npm-workspace clean', function() {
+  this.timeout(20000);
+
   beforeEach(function(done) {
     //clean and create new sandbox
-    rimraf.sync(SANDBOX_DIR);
-    ncp(FIXTURES_DIR, SANDBOX_DIR, done);
+    rimraf(SANDBOX_DIR, {}, () => ncp(FIXTURES_DIR, SANDBOX_DIR, done));
   });
   
   it('should clean a module (programmatically)', function(done) {

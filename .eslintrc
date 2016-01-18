@@ -1,0 +1,9 @@
+{
+  "extends": "airbnb",
+  "rules": {
+    // comma-dangle is from AirBnB
+    // For reference, 0 = rule off, 1 = warning fired on violation and 2 = error fired on violation
+    "comma-dangle": 0,
+    "no-console":0
+  }
+}

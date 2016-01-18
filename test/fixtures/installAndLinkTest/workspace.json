@@ -1,7 +1,9 @@
 {
   "links": {
     "prj2": "prj2",
-    "prj3": "prj3"
+    "prj3": "prj3",
+    "@scoped/prj2": "scopedPrj2",
+    "@scoped/prj3": "scopedPrj3"
   },
   "repos": {
     "aka-test":"https://registry.npmjs.org/"

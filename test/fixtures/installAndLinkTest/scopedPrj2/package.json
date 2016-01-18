@@ -1,0 +1,15 @@
+{
+  "name": "@scoped/prj2",
+  "version": "0.0.1",
+  "private": "true",
+  "dependencies": {
+    "lodash": "*"
+  },
+  "peerDependencies": {
+    "lodash": "*",
+    "@scoped/prj3": "*"
+  },
+  "devDependencies": {
+    "@scoped/prj3": "*"
+  }
+}
